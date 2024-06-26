@@ -1,0 +1,101 @@
+.jspsych-content {
+    margin: 50px auto;
+    width: 900px;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.hlikert-container {
+    font-size: 0;
+    text-align: center;
+}
+
+.hlikert {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 124px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 18px;
+    transition: background-color 300ms;
+    background-color: snow;
+    border-radius: 10px;
+}
+
+.hlikert:hover {
+    background-color: whitesmoke;
+}
+
+.hlikert-label {
+    /* background-color: whitesmoke; */
+    display: inline-flex;
+    width: calc(100% - 10px);
+    min-height: 100px;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 10px; */
+    padding: 5px;
+}
+
+.mtable-container {
+    width: 100%;
+    font-size: 0;
+    line-height: normal;
+}
+
+.mtable-scale-container {
+    width: 100%;
+}
+
+.mtable-scale-spacer {
+    display: inline-block;
+    width: 200px;
+    height: 10px;
+}
+
+.mtable-scale-point {
+    display: inline-flex;
+    width: 90px;
+    height: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 3px;
+    font-size: 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    vertical-align: bottom;
+}
+
+.mtable-statement-container {
+    width: 100%;
+    transition: background-color 300ms;
+}
+
+.mtable-statement-container:hover {
+    background-color: whitesmoke;
+}
+
+.mtable-statement-text {
+    display: inline-flex;
+    width: 200px;
+    min-height: 50px;
+    vertical-align: top;
+    align-items: center;
+    font-size: 15px;
+}
+
+.mtable-statement-point {
+    display: inline-flex;
+    width: 96px;
+    min-height: 50px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    justify-content: center;
+}
