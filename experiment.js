@@ -6,6 +6,7 @@ const jsPsych = initJsPsych({})
 // data pipe variables
 const subject_id = jsPsych.randomization.randomID(10)
 
+var scenario_counter = 0
 
 ///// TRIALS /////
 
@@ -77,6 +78,28 @@ const instructions = {
     }
 }
 
+// attention check
+const attention = {
+    type: jsPsychSurveyHtmlForm,
+    html: attention_question,
+    on_load: function() {
+        scenario_counter += 1
+
+        if (scenario_counter != 4) {
+            jsPsych.finishTrial()
+        }
+    },
+    on_finish: function(data) {
+        if (data.response) {
+            data.response = data.response.attention_check
+        }
+    },
+    data: {
+        type_of_trial: "attention",
+        subject_id: subject_id
+    }
+}
+
 // scenarios
 const scenario = {
     type: jsPsychSurveyHtmlForm,
@@ -112,7 +135,7 @@ const scenario = {
 }
 
 const scenario_timeline = {
-    timeline: [scenario],
+    timeline: [scenario, attention],
     timeline_variables: conditions,
     randomize_order: true
 }

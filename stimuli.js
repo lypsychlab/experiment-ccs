@@ -7,10 +7,10 @@ const consent_html = `
     <p style="text-align: left;">
         The purpose of this study is to understand how we interpret information. 
         This study will be conducted through this online survey. 
-        The survey should take you about <span style="font-weight: bold;">[TIME]</span> to complete. 
+        The survey should take you about <span style="font-weight: bold;">8 minutes</span> to complete. 
         There are no direct benefits to you, 
         but you may feel gratified knowing that you helped further the scholarly work in this research area, 
-        and you will be compensated <span style="font-weight: bold;">[MONEY]</span> for your participation. 
+        and you will be compensated <span style="font-weight: bold;">$1.60</span> for your participation. 
         There are no costs to you associated with your participation.
     </p>
     <p style="text-align: left;">
@@ -60,6 +60,61 @@ const instructions_page1 = `
         Then, the scenarios will follow one another until you have seen all 8. 
         After you have seen all the scenarios, there will be a short demographics survey.
     </p>
+`
+
+const attention_question = `
+    <div class="prevent-select" style="text-align: left;">
+        Sometimes respondents to our surveys are bots rather than real people. 
+        We need to remove those responses from our data to make sure our research findings are valid. 
+        To help us know who is actually a real person, please ignore the question wording below and select the option with the label '2.' 
+        This is not intended to trick you and will not affect your payment. Thank you!
+        <br>
+        <br>
+        If you were going bowling, how likely would you be to want to use a wooden bowling ball?
+        <br>
+        <div class="hlikert-container">
+            <div class="hlikert">
+                <label class="hlikert-label" for="attention_check_0">1<br>not likely at all</label>
+                <br>
+                <input name="attention_check" type="radio" value="0" id="attention_check_0" required />
+            </div>
+            <div class="hlikert">
+                <label class="hlikert-label" for="attention_check_1">2</label>
+                <br>
+                <input name="attention_check" type="radio" value="1" id="attention_check_1" />
+            </div>
+            <div class="hlikert">
+                <label class="hlikert-label" for="attention_check_2">3</label>
+                <br>
+                <input name="attention_check" type="radio" value="2" id="attention_check_2" />
+            </div>
+            <div class="hlikert">
+                <label class="hlikert-label" for="attention_check_3">4</label>
+                <br>
+                <input name="attention_check" type="radio" value="3" id="attention_check_3" />
+            </div>
+            <div class="hlikert">
+                <label class="hlikert-label" for="attention_check_4">5</label>
+                <br>
+                <input name="attention_check" type="radio" value="4" id="attention_check_4" />
+            </div>
+            <div class="hlikert">
+                <label class="hlikert-label" for="attention_check_5">6</label>
+                <br>
+                <input name="attention_check" type="radio" value="5" id="attention_check_5" />
+            </div>
+            <div class="hlikert">
+                <label class="hlikert-label" for="attention_check_6">7<br>very likely</label>
+                <br>
+                <input name="attention_check" type="radio" value="6" id="attention_check_6" />
+            </div>
+        </div>
+        <br>
+        <br>
+        You are halfway through the scenarios!
+        <br>
+        <br>
+    </div>
 `
 
 function scenario_description(description, info) {
@@ -651,37 +706,37 @@ const demographics_questions = `
 `
 
 const debrief_html = `
-<div style="text-align: left;">
-    <strong>What was this study about?</strong>
-    <br>
-    In this study, we were trying to better understand how people make inferences about success when given information about the objects vs. the people involved.
-    <br>
-    <br>
-    <strong>Why does it matter?</strong>
-    <br>
-    Your participation helps us answer research questions, which in turn has implications for public figures, policy, and law.
-    We are committed to sharing our research findings in ways that are accessible and relevant to the public.
-    <br>
-    <br>    
-    <strong>How to contact us:</strong>
-    <br>
-    Feel free to visit our <a href="https://moralitylab.bc.edu/" target="_blank">website</a> to learn more about our research.
-    If you have any concerns or questions about the study you just completed, please reach out to the lab at lypsychlab@gmail.com.
-    <br>
-    <br>
-    <strong>To learn more about your rights as a research participant:</strong>
-    <br>
-    If you have any concerns about research-related ethics or harm, or would like to learn more about the ethical constraints under which this study was conducted, 
-    please contact the Boston College Office for Research Protections at irb@bc.edu or 617-552-4778.
-    <br>
-    <br>
-    <strong>Completion Code:</strong>
-    <br>
-    Thank you for participating in this study. Your response has been recorded.
-    <br>
-    <br>
-    If the button below does not automatically enter your completion code, please copy and paste this code into Prolific: CWUP9JJ2
-    <br>
-    <br>
-</div>
+    <div style="text-align: left;">
+        <strong>What was this study about?</strong>
+        <br>
+        In this study, we were trying to better understand how people make inferences about success when given information about the objects vs. the people involved.
+        <br>
+        <br>
+        <strong>Why does it matter?</strong>
+        <br>
+        Your participation helps us answer research questions, which in turn has implications for public figures, policy, and law.
+        We are committed to sharing our research findings in ways that are accessible and relevant to the public.
+        <br>
+        <br>    
+        <strong>How to contact us:</strong>
+        <br>
+        Feel free to visit our <a href="https://moralitylab.bc.edu/" target="_blank">website</a> to learn more about our research.
+        If you have any concerns or questions about the study you just completed, please reach out to the lab at lypsychlab@gmail.com.
+        <br>
+        <br>
+        <strong>To learn more about your rights as a research participant:</strong>
+        <br>
+        If you have any concerns about research-related ethics or harm, or would like to learn more about the ethical constraints under which this study was conducted, 
+        please contact the Boston College Office for Research Protections at irb@bc.edu or 617-552-4778.
+        <br>
+        <br>
+        <strong>Completion Code:</strong>
+        <br>
+        Thank you for participating in this study. Your response has been recorded.
+        <br>
+        <br>
+        If the button below does not automatically enter your completion code, please copy and paste this code into Prolific: CWUP9JJ2
+        <br>
+        <br>
+    </div>
 `
