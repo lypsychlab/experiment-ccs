@@ -56,7 +56,7 @@ const instructions_page1 = `
         Then, you will be asked a few questions about the scenario and the person that you read about.
         <br>
         <br>
-        There are 8 scenarios. The first scenario will be presented as soon as you click the button below. 
+        There are 8 scenarios. The first scenario will be presented as soon as you click the "Next" button below. 
         Then, the scenarios will follow one another until you have seen all 8. 
         After you have seen all the scenarios, there will be a short demographics survey.
     </p>
